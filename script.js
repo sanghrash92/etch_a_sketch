@@ -9,12 +9,12 @@ for (i = 0; i < 256; i++) {
 
 const grid = document.querySelector('button');
 
-const newGrid = () => {
-    if 
-}
-grid.addEventListener('click', (e) => {
-    alert('What size grid would you like?')
-})
+// const newGrid = () => {
+//     if 
+// }
+// grid.addEventListener('click', (e) => {
+//     alert('What size grid would you like?')
+// })
 
 
 const color = (e) => {

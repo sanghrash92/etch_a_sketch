@@ -1,14 +1,19 @@
+@font-face {
+    font-family: 'Scriptin';
+    src: url(fonts/SCRIPTIN.ttf);
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: black;
-    border: 2px solid blue;
+    font-family: Scriptin, sans-serif;
+    background: rgb(235, 235, 126);
 }
 
 h1 {
+    font-size: 2em;
     text-align: center;
-    border: 2px solid white;
-    margin-top: 50px;
-    color: brown;
+    margin-top: 30px;
+    color: #f95959;
+    text-decoration: underline;
 }
 
 #box {
@@ -23,23 +28,32 @@ h1 {
     height: auto;
     width: 512px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-row-gap: 0em;
 }
 
 #container .box{
     border: 1px solid black;
     background-color: white;
     padding: 16px;
-    height: 4px;
-    width: 4px;
+    height: auto;
+    width: auto;
 }
 
 .button {
+    font-family: Scriptin;
+    font-size: 3em;
     text-align:center;
+    color: #c3195d;
+    border: 2px solid black;
 }
 
-.grid {
-    color: rgb(61, 61, 2);
+.grid1,
+.grid2,
+.grid3 {
+    margin-top: 10px;
+    color: #668ba4;
     width: auto;
     font-size: 20px;
     border-radius: 5px;
