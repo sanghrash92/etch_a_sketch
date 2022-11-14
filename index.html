@@ -10,14 +10,13 @@
     </head>
     <body>
         <h1>ETCH-A-SKETCH</h1>
-        <div class="button"> Grid Selection
-            <button class="grid1">16x16</button>
-            <button class="grid2">32x32</button>
-            <button class="grid3">64x64</button>
+        <div class="slidecontainer">
+            <p>Custom Grid:</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p><span id="demo"></span></p>
         </div>
-        
-        <div id="box">
-            <div id="container"></div>
+        <div id="grid">
+            
         </div>
     </body>
 </html>

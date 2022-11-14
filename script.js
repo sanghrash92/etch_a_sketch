@@ -1,26 +1,38 @@
+const slider = document.querySelector('#myRange');
+const value = document.querySelector('#demo');
+const grid = document.querySelector("#grid");
 
-const container = document.querySelector('#container');
+value.innerHTML= slider.value;
+slider.oninput = function() {
+    value.innerHTML = this.value;
+  };
 
-for (i = 0; i < 256; i++) {
-    const div = document.createElement('div');
-    div.classList.add('box');
-    container.appendChild(div);
+
+const createGrid = gridNumber => {
+    let gridArea = gridNumber * gridNumber;
+    for (let i = 1; i <= gridArea; i++) {
+        let gridItem = document.createElement('div');
+        grid.style.gridTemplateColumns = `repeat(${gridNumber}, 1fr)`;
+        grid.style.gridTemplateRows = `repeat(${gridNumber}, 1fr)`;
+        grid.insertAdjacentElement('beforeend', gridItem);
+        gridItem.style.border = '1px solid grey'
+    };
+    const gridBoxes = grid.querySelectorAll('div');
+    gridBoxes.forEach(gridBox => gridBox.addEventListener('mouseover', colorGrid));
 };
 
-const grid = document.querySelector('button');
-
-// const newGrid = () => {
-//     if 
-// }
-// grid.addEventListener('click', (e) => {
-//     alert('What size grid would you like?')
-// })
-
-
-const color = (e) => {
+const colorGrid = (e) => {
     const scroll = e.target;
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     scroll.style.backgroundColor = '#' + randomColor;
-}
+};
 
-container.addEventListener('mouseover', color);
+function pixelSize() {
+    let gridPixels = grid.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.remove());
+    createGrid(slider.value);
+};
+
+createGrid(10)
+
+slider.addEventListener('mouseup', pixelSize);
