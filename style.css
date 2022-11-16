@@ -5,12 +5,12 @@
 
 body {
     font-family: Scriptin, sans-serif;
-    background: rgb(235, 235, 126);
+    background: #6082B6;
     text-align: center;
 }
 
 p {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 h1 {
@@ -21,18 +21,18 @@ h1 {
 #button,
 #rainbow {
     font-family: Scriptin, sans-serif;
-    background: #04AA6D;
+    background: #FBCEB1;
     color: black;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 25px;
     padding: 15px;
 }
 
 .slidecontainer {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 70px;
+    justify-content: space-evenly;
+    gap: 50px;
     width: 100%;
 }
 
